@@ -1,5 +1,5 @@
 # Notes-App
-# =========
+
 <br> 
 
 ## In today’s fast-paced learning environment, access to structured study material is crucial. That's why I built Notes-App, a platform where students can easily find and access notes for different subjects. 📚✨
