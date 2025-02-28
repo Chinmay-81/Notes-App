@@ -1,0 +1,329 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #e5c726;
+    padding: 15px 20px;
+    color: #003366;
+    position: relative; /* Needed for proper centering */
+}
+nav a:hover {
+    background-color: #444; 
+    color: #fff; 
+    border-radius: 50px; 
+    padding: 10px 20px; 
+    transition: 0.3s ease-in-out;
+}
+
+/* Logo Container - Left */
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Keeps logo on the left */
+}
+
+img{
+    height: 70px;
+}
+
+.logo {
+    font-size: 2rem;
+    display: inline-block;
+    animation: rotateLogo 4s linear infinite;
+    margin-right: 10px;
+}
+
+.app-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Rotating Logo Animation */
+@keyframes rotateLogo {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Centering Navbar Items */
+.nav-center {
+    position: absolute; /* Ensures absolute centering */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #003366;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Navbar Hover Effects */
+
+
+
+/* Profile Dropdown */
+.dropdown {
+    position: relative;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+
+.dropdown:hover .dropbtn {
+    background-color: #444; 
+    transform: scale(1.1);
+}
+
+
+.dropdown-content {
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    left: 1.1cm;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 5px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    overflow: hidden;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+.dropdown-content  a{
+    color: #003366;
+    padding: 12px 15px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+
+.dropdown-content a:hover {
+    background-color: #444;
+    
+}
+
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #f0c419; 
+    padding: 5px;
+    border-radius: 50px; 
+}
+
+#searchInput {
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 50px; 
+    font-size: 16px;
+    width: 100%;
+    max-width: 250px;
+}
+
+.search-btn {
+    background-color: #fff; 
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background-color: #444; 
+}
+
+
+
+button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #444;
+    margin-top: -1cm;
+    text-align: center;
+    padding: 50px;
+}
+
+
+.wrapper {
+    padding: 20px 10%;
+    flex: 1; 
+}
+
+
+.card_area {
+    display: grid;
+    margin-top: 50px;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+}
+
+
+.card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.card img {
+    height: 310px;
+    width: 100%; 
+    display: block;
+    border-radius: 12px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(28, 28, 28, 0.8); 
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.4s ease, top 0.4s ease;
+}
+
+
+.overlay h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+
+/* Button Styling */
+.overlay a{
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    background: #054ea1;
+    border-radius: 50px;
+    text-align: center;
+    padding: 5px 15px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+.overlay p {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    padding: 0 65px; 
+    word-wrap: break-word; 
+    text-align: center; 
+    max-width: 100%; 
+}
+
+
+.overlay a:hover {
+    background: teal;
+}
+
+
+
+.card:hover .overlay {
+    height: 100%;
+    opacity: 1;
+    top: 0;
+}
+.card:hover img {
+    transform: scale(1.15);
+}
+
+#languageTitle{
+    text-align: center;
+}
+
+
+
+.footer-section{
+    background-color: #e5c726;
+    padding: 40px;
+    text-align: center;
+    color:#054ea1;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: auto;
+}
+
+.footer-section a{
+    text-decoration: none;
+}
+

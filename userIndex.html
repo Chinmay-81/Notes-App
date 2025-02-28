@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes-App</title>
+    <link rel="stylesheet" href="UserStyle.css">
+</head>
+<body>
+
+    <nav class="navbar">
+       
+        <div class="logo-container">
+            <div class="logo"><img src="img/homeLogo.png" alt=""></div> 
+            <span class="app-name">Notes-App</span>
+        </div>
+
+       
+        <div class="nav-center">
+            <ul class="nav-links">
+                <li><a href="userIndex.html">Home</a></li>
+                <li><a href="#">Notes</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">College</a>
+                    <div class="dropdown-content">
+                        <a href="#">ITER</a>
+                        <a href="#">OUTR</a>
+                        <a href="#">KIIT</a>
+                    </div>
+                </li>
+                <li><a href="#">About us</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Profile</a>
+                    <div class="dropdown-content">
+                        <a href="#">Edit Details</a>
+                        <a id="logout-btn">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+       
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search here...">
+            <button id="search-btn" class="search-btn">🔍</button>
+        </div>
+        
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Welcome to Notes-App</h1>
+        <p>Access your college notes easily.</p>
+        <div class="wrapper">
+            <div class="card_area">
+                <div class="card">
+                    <img src="img/java.png" alt="java">
+                    <div class="overlay">
+                        <h3>Java</h3>
+                        <p>Java is a programming language and computing platform that is used to create applications for many devices. It is a popular choice for developers because it is fast, reliable, and secure</p>
+                        <a href="notes.html?language=Java">Open</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/spring-boot.png" alt="spring-boot">
+                    <div class="overlay">
+                        <h3>SpringBoot</h3>
+                        <p>Spring Boot is an open-source framework for developing web applications and microservices using Java. It's an extension of the Spring framework that helps developers create applications faster and more easily. </p>
+                        <a href="notes.html?language=SpringBoot">Open</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/python.svg" alt="python">
+                    <div class="overlay">
+                        <h3>Python</h3>
+                        <p>Python is a general-purpose programming language that can be used for many different tasks, including web development, data analysis, and machine learning.</p>
+                        <a href="notes.html?language=Python">Open</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-section">
+        <small>Developed  & Maintained By
+            <a href="https://www.linkedin.com/in/nayakchinmay/" target="_blank">Chinmay Nayak</a>
+        </small>
+        <small> | All Rights Reserved</small>
+        
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app.js"></script>  
+
+</body>
+</html>
