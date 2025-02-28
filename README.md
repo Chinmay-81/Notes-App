@@ -1,4 +1,4 @@
-# Notes-App <br>
+# Notes-App
 # =========
 <br> 
 
